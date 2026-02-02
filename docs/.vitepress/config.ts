@@ -7,8 +7,8 @@ export default defineConfig({
   description: '面向前端工程师的 Flutter 系统学习指南，从 Dart 基础到完整 App 开发',
   lang: 'zh-CN',
   
-  // 部署配置
-  base: '/',
+  // 部署配置 - GitHub Pages 子路径
+  base: '/flutter_docs/',
   
   // 忽略死链接（开发阶段）
   ignoreDeadLinks: true,
