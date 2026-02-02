@@ -19,7 +19,7 @@ from typing import List, Dict, Optional
 
 # Deepseek API 配置
 DEEPSEEK_API_URL = "https://yunwu.ai/v1/chat/completions"
-DEEPSEEK_API_KEY = "sk-eLOELZCVK7YZbAkcL8pYGsjaVEh8V1AlG1NTXHG6Rc14QcoB"
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 
 # Flutter API 文档基础 URL
 FLUTTER_API_BASE = "https://api.flutter.dev/flutter"

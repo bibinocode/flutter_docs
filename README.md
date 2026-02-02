@@ -134,8 +134,9 @@ flutter build web
 
 ```python
 # scripts/widget_crawler/crawler.py
-DEEPSEEK_API_URL = "https://yunwu.ai/v1/chat/completions"
-DEEPSEEK_API_KEY = "sk-eLOELZCVK7YZbAkcL8pYGsjaVEh8V1AlG1NTXHG6Rc14QcoB"
+# 从环境变量读取
+DEEPSEEK_API_URL = os.getenv("DEEPSEEK_API_URL")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 ```
 
 ### 域名配置

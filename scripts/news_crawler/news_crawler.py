@@ -31,7 +31,7 @@ PUB_DEV_API = "https://pub.dev/api/packages"
 
 # Deepseek API 配置（用于翻译）
 DEEPSEEK_API_URL = "https://yunwu.ai/v1/chat/completions"
-DEEPSEEK_API_KEY = "sk-eLOELZCVK7YZbAkcL8pYGsjaVEh8V1AlG1NTXHG6Rc14QcoB"
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 
 # 标题翻译映射（常用词汇）
 TITLE_TRANSLATIONS = {
