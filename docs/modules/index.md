@@ -1,62 +1,125 @@
 # 功能模块
 
-本篇章介绍 Flutter 应用开发中常用的功能模块实现，包括屏幕适配、网络请求、数据存储、权限管理等实用功能。
+本篇章介绍 Flutter 应用开发中常用的功能模块实现，涵盖开发适配、网络请求、支付集成、热更新等实战功能。
 
-## 📚 章节目录
+## 📚 模块目录
 
-### 🖥️ 界面适配
+### 🖥️ 开发适配
 
-- [屏幕适配](./adaptation.md) - flutter_screenutil 与 MediaQuery 适配方案
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [屏幕适配](./adaptation.md) | flutter_screenutil 与 MediaQuery 适配方案 | ✅ |
+| [版本管理](./version-management.md) | FVM 多版本 Flutter 管理 | ✅ |
 
-### 🌐 网络与数据
+### 🔐 用户认证
 
-- 网络请求 - Dio 封装与拦截器（即将推出）
-- 数据持久化 - SharedPreferences 与 Hive（即将推出）
-- 数据库操作 - SQLite 与 Drift（即将推出）
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [Apple 登录](./auth/apple-signin.md) | Sign in with Apple 集成 | ✅ |
+| [生物识别](./biometric/biometric.md) | 指纹/面容识别认证 | ✅ |
 
-### 🔐 安全与权限
+### 🌐 网络请求
 
-- 权限管理 - permission_handler 使用（即将推出）
-- 生物识别 - 指纹与面容识别（即将推出）
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [http 包](./network/http.md) | 官方 http 包基础使用 | ✅ |
+| [Dio 详解](./network/dio.md) | Dio 封装、拦截器、缓存 | ✅ |
+| [Mock 数据](./network/mock.md) | 开发阶段 Mock 方案 | ✅ |
 
-### 📱 设备功能
+### 💾 数据存储
 
-- 相机与相册 - image_picker 使用（即将推出）
-- 文件选择 - file_picker 使用（即将推出）
-- 地理位置 - geolocator 使用（即将推出）
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [SharedPreferences](./storage/shared-prefs.md) | 轻量级键值存储 | ✅ |
+| [Hive 数据库](./storage/hive.md) | 高性能 NoSQL 数据库 | ✅ |
+| [SQLite](./storage/sqlite.md) | 关系型数据库 sqflite | ✅ |
 
-### 🔔 消息推送
+### 💳 支付集成
 
-- 本地通知 - flutter_local_notifications（即将推出）
-- 远程推送 - Firebase Cloud Messaging（即将推出）
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [支付宝支付](./payment/alipay.md) | tobias 插件、服务端签名、异步回调 | ✅ |
+| [微信支付](./payment/wechatpay.md) | fluwx 插件、统一下单、支付回调 | ✅ |
+| [微信登录与分享](./payment/wechat-login-share.md) | OAuth 授权、多类型内容分享 | ✅ |
 
-### 🎨 UI 增强
+### 🔄 热更新
 
-- 图片加载 - cached_network_image（即将推出）
-- 下拉刷新 - pull_to_refresh（即将推出）
-- 骨架屏 - shimmer 加载效果（即将推出）
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [热更新方案](./hotupdate/) | Shorebird、Fair、MXFlutter、OTA、Web 方案对比 | ✅ |
+
+### 📲 App 更新
+
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [在线更新](./app-update/) | 版本检测、APK 下载安装、App Store 跳转 | ✅ |
+
+### 🔔 消息通知
+
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [本地通知](./notification/local-notification.md) | flutter_local_notifications | ✅ |
+
+### 🔑 权限管理
+
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [permission_handler](./permission.md) | 统一权限请求与管理 | ✅ |
+
+### 📷 图片与相机
+
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [图片选择](./image-picker.md) | image_picker 相册/相机 | ✅ |
+| [图片压缩](./image-compress.md) | flutter_image_compress | ✅ |
+
+### 🎨 绘图与传感器
+
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [Canvas 绘图](./drawing/) | CustomPainter 自定义绑定 | ✅ |
+| [设备传感器](./sensor/) | 加速度计、陀螺仪、磁力计 | ✅ |
+
+### 🌍 平台适配
+
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [Web 适配](./platform/web.md) | Flutter Web 部署与优化 | ✅ |
+| [桌面端适配](./platform/desktop.md) | macOS/Windows/Linux 适配 | ✅ |
+| [响应式布局](./platform/responsive.md) | 多屏幕尺寸适配方案 | ✅ |
+| [Platform Channel](./platform/channel.md) | 原生通信桥接 | ✅ |
+| [鸿蒙适配](./platform/harmonyos.md) | HarmonyOS NEXT 适配 | ✅ |
 
 ### 🛠️ 工具集成
 
-- 日志管理 - logger 使用（即将推出）
-- 崩溃收集 - Sentry 集成（即将推出）
-- 应用更新 - 版本检查与升级（即将推出）
+| 模块 | 说明 | 状态 |
+|------|------|------|
+| [CI/CD 自动化](./deploy/cicd.md) | GitHub Actions、Fastlane | ✅ |
+| [FJS 引擎](./fjs.md) | JavaScript 执行引擎 | ✅ |
+| [主题色生成器](./theme/color-generator.md) | Material 3 动态主题 | ✅ |
 
-## 学习建议
+## 🎯 推荐学习路线
 
-1. **按需学习**：根据项目需求选择相关模块
-2. **动手实践**：每个模块都有完整示例，建议边学边练
-3. **深入源码**：了解第三方库的实现原理
-4. **关注更新**：定期检查依赖包的版本更新
-
-## 开发环境
-
-本篇章示例基于以下环境：
-
-```yaml
-environment:
-  sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.10.0"
+```
+基础功能                    进阶功能                    商业功能
+   │                         │                         │
+   ▼                         ▼                         ▼
+┌──────────┐            ┌──────────┐            ┌──────────┐
+│ 屏幕适配  │            │ 网络请求  │            │ 支付集成  │
+│ 数据存储  │     →      │ 权限管理  │     →      │ 热更新   │
+│ 本地通知  │            │ 图片处理  │            │ App更新  │
+└──────────┘            └──────────┘            └──────────┘
 ```
 
-建议使用最新稳定版 Flutter SDK 进行开发。
+## 💡 学习建议
+
+1. **按需选择** - 根据项目需求选择相关模块学习
+2. **动手实践** - 每个模块都有完整示例代码，建议边学边练
+3. **理解原理** - 不仅会用，更要理解底层实现
+4. **关注更新** - Flutter 生态更新较快，注意依赖版本
+
+## 🔗 相关资源
+
+- [pub.dev](https://pub.dev) - Dart/Flutter 包管理
+- [Flutter 官方文档](https://docs.flutter.dev)
+- [GitHub 仓库](https://github.com/bibinocode/flutter_docs)

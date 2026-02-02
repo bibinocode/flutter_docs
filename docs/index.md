@@ -13,11 +13,11 @@ hero:
       text: 🚀 开始学习
       link: /dart/01-introduction
     - theme: alt
-      text: 📦 在线 Demo
-      link: https://demo.flutter.kmod.cn
+      text: Widget 大全
+      link: /widgets/
     - theme: alt
       text: GitHub
-      link: https://github.com/user/flutter_tutorial
+      link: https://github.com/bibinocode/flutter_docs
 
 features:
   - icon: 🎯
@@ -39,11 +39,11 @@ features:
   - icon: 🔄
     title: 状态管理对比
     details: Riverpod vs GetX vs Provider vs Bloc，同一功能多种实现，理解各方案优劣
-    link: /modules/state/comparison
-  - icon: 🌐
-    title: 聚合 Demo App
-    details: 一个 App 覆盖所有知识点，支持 Web 在线预览，代码可直接复用到实际项目
-    link: https://demo.flutter.kmod.cn
+    link: /state/
+  - icon: 💳
+    title: 支付与热更新
+    details: 支付宝/微信支付集成、微信登录分享、Shorebird/Fair热更新、App在线升级方案
+    link: /modules/payment/alipay
 ---
 
 <script setup>
@@ -156,13 +156,13 @@ import { VPTeamMembers } from 'vitepress/theme'
     <span class="icon">🔧</span>
     <span class="text">功能模块</span>
   </a>
-  <a href="/modules/state/getx" class="quick-link">
+  <a href="/state/04-getx" class="quick-link">
     <span class="icon">⚡</span>
     <span class="text">GetX 教程</span>
   </a>
-  <a href="https://demo.flutter.kmod.cn" class="quick-link" target="_blank">
-    <span class="icon">🌐</span>
-    <span class="text">在线 Demo</span>
+  <a href="https://github.com/bibinocode/flutter_docs" class="quick-link" target="_blank">
+    <span class="icon">📂</span>
+    <span class="text">GitHub</span>
   </a>
 </div>
 
