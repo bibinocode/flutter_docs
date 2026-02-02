@@ -1,0 +1,492 @@
+/**
+ * Flutter 从零到一 - 自定义主题样式
+ * 参考 usehook.cn 风格设计
+ */
+
+/* ========== CSS 变量 ========== */
+:root {
+  /* Flutter 品牌色 */
+  --flutter-blue: #0553B1;
+  --flutter-blue-light: #027DFD;
+  --flutter-blue-dark: #003C7E;
+  --flutter-sky: #13B9FD;
+  --flutter-navy: #042B59;
+  
+  /* VitePress 主题覆盖 - 亮色模式 */
+  --vp-c-brand-1: var(--flutter-blue);
+  --vp-c-brand-2: var(--flutter-blue-light);
+  --vp-c-brand-3: var(--flutter-sky);
+  --vp-c-brand-soft: rgba(5, 83, 177, 0.14);
+  
+  /* 背景色 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+  --vp-c-bg-mute: #f2f2f3;
+  --vp-c-bg-alt: #f9f9fa;
+  
+  /* 边框 */
+  --vp-c-border: rgba(60, 60, 60, 0.12);
+  --vp-c-divider: rgba(60, 60, 60, 0.06);
+  
+  /* 首页 Hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, var(--flutter-blue) 0%, var(--flutter-sky) 100%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, var(--flutter-blue) 30%, var(--flutter-sky) 100%);
+  --vp-home-hero-image-filter: blur(68px);
+  
+  /* 按钮 */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: var(--flutter-blue);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: var(--flutter-blue-light);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: var(--flutter-blue-dark);
+  
+  /* 代码块 */
+  --vp-code-color: var(--flutter-navy);
+  --vp-code-bg: rgba(5, 83, 177, 0.05);
+  --vp-code-block-bg: #1e1e1e;
+  
+  /* 侧边栏 */
+  --vp-sidebar-width: 280px;
+}
+
+/* ========== 暗色模式 ========== */
+.dark {
+  --vp-c-brand-1: var(--flutter-sky);
+  --vp-c-brand-2: var(--flutter-blue-light);
+  --vp-c-brand-3: var(--flutter-blue);
+  --vp-c-brand-soft: rgba(19, 185, 253, 0.14);
+  
+  /* 背景色 - 参考 usehook.cn 深色风格 */
+  --vp-c-bg: #0f0f1a;
+  --vp-c-bg-soft: #161625;
+  --vp-c-bg-mute: #1a1a2e;
+  --vp-c-bg-alt: #12121f;
+  
+  /* 边框 */
+  --vp-c-border: rgba(255, 255, 255, 0.08);
+  --vp-c-divider: rgba(255, 255, 255, 0.04);
+  
+  /* 代码块 */
+  --vp-code-color: var(--flutter-sky);
+  --vp-code-bg: rgba(19, 185, 253, 0.08);
+  --vp-code-block-bg: #0d0d14;
+}
+
+/* ========== 全局样式 ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+/* 代码字体 */
+code, pre, .vp-code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, Consolas, monospace;
+}
+
+/* ========== 导航栏 ========== */
+.VPNav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--flutter-blue) 0%, var(--flutter-sky) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .VPNavBarTitle .title {
+  background: linear-gradient(135deg, var(--flutter-sky) 0%, var(--flutter-blue-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== 侧边栏 ========== */
+.VPSidebar {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.dark .VPSidebar {
+  background-color: var(--vp-c-bg-alt);
+}
+
+.VPSidebarItem.level-0 .text {
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem .text {
+  transition: color 0.25s, padding-left 0.25s;
+}
+
+.VPSidebarItem .text:hover {
+  color: var(--vp-c-brand-2);
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* 章节编号样式 */
+.VPSidebarItem .text::before {
+  content: '';
+}
+
+/* ========== 首页 ========== */
+.VPHero .name {
+  font-size: 3.5rem !important;
+  font-weight: 800;
+}
+
+.VPHero .text {
+  font-size: 1.5rem !important;
+  color: var(--vp-c-text-2);
+}
+
+.VPHero .tagline {
+  font-size: 1.1rem !important;
+  line-height: 1.8;
+}
+
+/* Hero 图片动画 */
+.VPHero .image-container {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* 特性卡片 */
+.VPFeature {
+  border-radius: 16px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-soft);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.VPFeature .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.VPFeature .details {
+  color: var(--vp-c-text-2);
+}
+
+/* ========== 内容区域 ========== */
+.vp-doc h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--flutter-blue) 0%, var(--flutter-sky) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .vp-doc h1 {
+  background: linear-gradient(135deg, var(--flutter-sky) 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--vp-c-brand-soft);
+  padding-bottom: 0.5rem;
+}
+
+.vp-doc h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* 链接样式 */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--vp-c-brand-soft);
+  transition: all 0.25s;
+}
+
+.vp-doc a:hover {
+  border-bottom-style: solid;
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* 代码块 */
+.vp-doc div[class*='language-'] {
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .vp-doc div[class*='language-'] {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.vp-doc div[class*='language-'] code {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 行号 */
+.vp-doc div[class*='language-'].line-numbers-mode .line-numbers {
+  border-right: 1px solid var(--vp-c-border);
+}
+
+/* 代码块语言标签 */
+.vp-doc div[class*='language-']::before {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+/* ========== 提示框 ========== */
+.vp-doc .custom-block {
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.vp-doc .custom-block.tip {
+  background-color: rgba(5, 83, 177, 0.08);
+  border-color: var(--flutter-blue);
+}
+
+.vp-doc .custom-block.warning {
+  background-color: rgba(255, 197, 23, 0.08);
+  border-color: #ffc517;
+}
+
+.vp-doc .custom-block.danger {
+  background-color: rgba(244, 63, 94, 0.08);
+  border-color: #f43f5e;
+}
+
+.vp-doc .custom-block.info {
+  background-color: rgba(19, 185, 253, 0.08);
+  border-color: var(--flutter-sky);
+}
+
+/* ========== 表格 ========== */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dark .vp-doc table {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-brand-soft);
+  font-weight: 600;
+}
+
+.vp-doc tr:hover td {
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* ========== 自定义组件样式 ========== */
+
+/* DartPad 嵌入组件 */
+.dartpad-container {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .dartpad-container {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dartpad-container iframe {
+  border: none;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Flutter Web 预览组件 */
+.flutter-preview-container {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border: 2px solid var(--vp-c-border);
+  background: var(--vp-c-bg-soft);
+}
+
+.flutter-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--vp-c-bg-mute);
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+.flutter-preview-header .title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--vp-c-brand-1);
+}
+
+.flutter-preview-body {
+  padding: 0;
+}
+
+.flutter-preview-body iframe {
+  border: none;
+  width: 100%;
+  min-height: 500px;
+  background: #fff;
+}
+
+/* Widget 卡片组件 */
+.widget-card {
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.widget-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-soft);
+}
+
+.dark .widget-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.widget-card .name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 0.5rem;
+}
+
+.widget-card .description {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+}
+
+.widget-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.widget-card .tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* Widget 网格布局 */
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 2.5rem !important;
+  }
+  
+  .VPHero .text {
+    font-size: 1.25rem !important;
+  }
+  
+  .widget-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== 动画 ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vp-doc > * {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-soft);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* ========== 打印样式 ========== */
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPLocalNav {
+    display: none !important;
+  }
+  
+  .VPContent {
+    padding: 0 !important;
+  }
+}

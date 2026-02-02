@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flutter-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0553B1"/>
+      <stop offset="100%" style="stop-color:#13B9FD"/>
+    </linearGradient>
+  </defs>
+  <!-- Flutter Logo Simplified -->
+  <g transform="translate(40, 30)">
+    <!-- Back shape -->
+    <path d="M60 0L120 60L90 90L60 60L0 120L30 150L90 90L120 120L60 180L0 120L60 60L60 0Z" fill="url(#flutter-gradient)"/>
+    <!-- Front shape -->
+    <path d="M60 60L90 90L60 120L30 90L60 60Z" fill="#13B9FD" opacity="0.8"/>
+  </g>
+</svg>
