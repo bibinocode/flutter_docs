@@ -445,7 +445,7 @@ export default defineConfig({
     
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/user/flutter_tutorial' }
+      { icon: 'github', link: 'https://github.com/bibinocode/flutter_docs' }
     ],
     
     // 页脚
@@ -502,7 +502,7 @@ export default defineConfig({
     
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/user/flutter_tutorial/edit/main/docs/:path',
+      pattern: 'https://github.com/bibinocode/flutter_docs/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     }
   },
