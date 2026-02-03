@@ -112,6 +112,7 @@ export default defineConfig({
             { text: 'Provider 详解', link: '/state/02-provider' },
             { text: 'Riverpod 详解', link: '/state/03-riverpod' },
             { text: 'GetX 详解', link: '/state/04-getx' },
+            { text: 'GetX 架构实战', link: '/state/getx-architecture' },
             { text: 'Bloc 详解', link: '/state/05-bloc' },
             { text: '方案对比与选择', link: '/state/06-comparison' },
           ]
