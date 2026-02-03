@@ -27,6 +27,7 @@ export default defineConfig({
       { text: '状态管理', link: '/state/' },
       { text: 'Widget 大全', link: '/widgets/' },
       { text: '功能模块', link: '/modules/' },
+      { text: '项目推荐', link: '/projects/' },
       { text: '📢 最新动态', link: '/news/' },
     ],
     
@@ -427,6 +428,44 @@ export default defineConfig({
             { text: '在线更新', link: '/modules/app-update/' },
           ]
         }
+      ],
+      
+      // 项目推荐
+      '/projects/': [
+        {
+          text: '项目学习推荐',
+          items: [
+            { text: '推荐概览', link: '/projects/' },
+          ]
+        },
+        {
+          text: '完整应用',
+          collapsed: false,
+          items: [
+            { text: 'LocalSend - 跨平台文件传输', link: '/projects/localsend' },
+            { text: 'FlClash - 代理客户端', link: '/projects/flclash' },
+            { text: 'AppFlowy - Notion 替代品', link: '/projects/appflowy' },
+            { text: 'PiliPala - B站客户端', link: '/projects/pilipala' },
+            { text: 'Flutter Novel - 小说阅读器', link: '/projects/flutter-novel' },
+          ]
+        },
+        {
+          text: 'UI 模板与组件',
+          collapsed: false,
+          items: [
+            { text: 'Flutter UI Templates', link: '/projects/flutter-ui-templates' },
+            { text: 'FlutterCandies 糖果社区', link: '/projects/fluttercandies' },
+          ]
+        },
+        {
+          text: 'FlutterCandies 插件',
+          collapsed: false,
+          items: [
+            { text: 'Photo Manager - 媒体资源管理', link: '/projects/photo-manager' },
+            { text: 'WeChat Camera Picker - 微信相机', link: '/projects/wechat-camera-picker' },
+            { text: 'WeChat Flutter - 仿微信应用', link: '/projects/wechat-flutter' },
+          ]
+        },
       ],
       
       // 生态系统
