@@ -29,6 +29,7 @@ export default defineConfig({
       { text: '功能模块', link: '/modules/' },
       { text: '项目推荐', link: '/projects/' },
       { text: '📢 最新动态', link: '/news/' },
+      { text: '🔗 Web3 全栈', link: '/web3/' },
     ],
     
     // 侧边栏
@@ -274,6 +275,65 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Clip 系列', link: '/widgets/clip/' },
+          ]
+        },
+      ],
+      
+      // Web3 全栈开发
+      '/web3/': [
+        {
+          text: 'GO + Flutter Web3 从零到一',
+          collapsed: false,
+          items: [
+            { text: '📋 教学大纲总览', link: '/web3/' },
+            { text: '🚀 零基础入门指南', link: '/web3/00-getting-started' },
+          ]
+        },
+        {
+          text: '第一模块：区块链基础与密码学',
+          collapsed: false,
+          items: [
+            { text: '第1章 区块链核心原理', link: '/web3/01-blockchain-fundamentals' },
+            { text: '第2章 密码学与钱包原理', link: '/web3/02-cryptography' },
+            { text: '第3章 以太坊架构与多链生态', link: '/web3/03-ethereum-multichain' },
+          ]
+        },
+        {
+          text: '第二模块：Go 后端开发',
+          collapsed: false,
+          items: [
+            { text: '第4章 Go 语言核心精通', link: '/web3/04-go-core' },
+            { text: '第5章 Go-Ethereum 链上交互', link: '/web3/05-go-ethereum' },
+            { text: '第9章 Go 后端微服务架构', link: '/web3/09-go-microservices' },
+            { text: '第10章 数据存储与高可用', link: '/web3/10-go-storage' },
+          ]
+        },
+        {
+          text: '第三模块：智能合约开发',
+          collapsed: false,
+          items: [
+            { text: '第6章 Solidity 智能合约开发', link: '/web3/06-solidity-fundamentals' },
+            { text: '第11章 DeFi 协议 Uniswap V3/V4', link: '/web3/11-defi-uniswap' },
+            { text: '第12章 合约安全与审计', link: '/web3/12-contract-security' },
+            { text: '第13章 Solana 合约开发 (Rust)', link: '/web3/13-solana-rust' },
+          ]
+        },
+        {
+          text: '第四模块：Flutter DApp 前端',
+          collapsed: false,
+          items: [
+            { text: '第7章 Flutter DApp 前端开发', link: '/web3/07-flutter-web3' },
+            { text: '第8章 Web3 前端交互基础', link: '/web3/08-web3-frontend-basics' },
+            { text: '第14章 Flutter 钱包深度开发', link: '/web3/14-flutter-wallet' },
+            { text: '第15章 DApp 浏览器与 DeFi 交互', link: '/web3/15-flutter-dapp-browser' },
+            { text: '第16章 状态管理与工程化', link: '/web3/16-flutter-engineering' },
+          ]
+        },
+        {
+          text: '第五模块：综合实战项目',
+          collapsed: true,
+          items: [
+            { text: '后续章节持续更新中...', link: '/web3/#第五模块-综合实战项目与部署上线-6-周' },
           ]
         },
       ],
