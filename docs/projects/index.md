@@ -20,6 +20,7 @@
 | [AppFlowy](./appflowy) | 开源 Notion 替代品 | BLoC + Rust Backend | ⭐⭐⭐⭐⭐ |
 | [PiliPala](./pilipala) | B站第三方客户端 | GetX + Hive | ⭐⭐⭐ |
 | [Flutter Novel](./flutter-novel) | 小说阅读器 | Riverpod + auto_route | ⭐⭐⭐ |
+| [MetaMask Mobile](./metamask-mobile) | 加密钱包深度解析 | React Native + TypeScript | ⭐⭐⭐⭐⭐ |
 
 ### UI 模板与组件
 

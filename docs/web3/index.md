@@ -4,6 +4,17 @@
 
 ---
 
+## 🚀 快速开始
+
+如果你是第一次学习 Web3 + Flutter，推荐按照此顺序：
+
+1. **[✨ Flutter Web3 从 0 到 1](./00-flutter-web3-from-zero.md)** — 学习地图和完整路线图（从基础知识到生产部署）
+2. **[📚 MetaMask Mobile 项目解析](../projects/metamask-mobile.md)** — 理解企业级钱包的架构设计
+3. **[07 Flutter DApp 前端开发](./07-flutter-web3.md)** — 完整的 Flutter Web3 代码实现
+4. **[08 Web3 前端交互基础](./08-web3-frontend-basics.md)** — JavaScript Web3 前端（参考学习）
+
+---
+
 ## 课程定位与目标
 
 - 面向 Web2 开发者转型 Web3 全栈工程师
