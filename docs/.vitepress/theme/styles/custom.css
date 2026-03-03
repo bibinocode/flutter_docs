@@ -48,7 +48,7 @@
   /* 代码块 */
   --vp-code-color: var(--flutter-navy);
   --vp-code-bg: rgba(5, 83, 177, 0.05);
-  --vp-code-block-bg: #1e1e1e;
+  --vp-code-block-bg: #f6f8fa;
   
   /* 侧边栏 */
   --vp-sidebar-width: 280px;
@@ -250,8 +250,14 @@ code, pre, .vp-code {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* 浅色模式代码块边框 */
+:root .vp-doc div[class*='language-'] {
+  border: 1px solid rgba(5, 83, 177, 0.1);
+}
+
 .dark .vp-doc div[class*='language-'] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: none;
 }
 
 .vp-doc div[class*='language-'] code {
@@ -262,6 +268,11 @@ code, pre, .vp-code {
 /* 行号 */
 .vp-doc div[class*='language-'].line-numbers-mode .line-numbers {
   border-right: 1px solid var(--vp-c-border);
+}
+
+/* 浅色模式行号文字颜色 */
+:root .vp-doc div[class*='language-'].line-numbers-mode .line-numbers {
+  color: rgba(4, 43, 89, 0.4);
 }
 
 /* 代码块语言标签 */

@@ -525,12 +525,14 @@
 #### 第 15 周：DEX 核心开发
 
 ##### 智能合约层
+
 - Fork Uniswap V3/V4 核心合约并定制
 - 自定义 Hook 开发：动态手续费、限价单、TWAMM
 - 多代币 Factory 部署
 - 合约测试：Foundry Fuzz + Fork Testing
 
 ##### Go 后端服务
+
 - 订单撮合引擎：内存撮合 + 链上结算
 - 交易路由服务：最优路径计算（类 1inch 路由算法）
 - 价格聚合服务：多源价格聚合 + TWAP 计算
@@ -538,6 +540,7 @@
 - K 线数据服务：1m / 5m / 1h / 1d 时序数据生成
 
 ##### Flutter 前端
+
 - Token Swap 页面：代币选择、金额计算、滑点设置、价格影响
 - 流动性页面：添加/移除流动性、Position 管理、收益追踪
 - K 线图表：TradingView 风格的价格图表
@@ -546,12 +549,14 @@
 #### 第 16 周：DEX 高级功能与部署
 
 ##### 高级功能
+
 - MEV 保护：Flashbots 集成 / 私有交易池
 - 跨链交易：跨链桥接口集成
 - 限价单系统：链下签名 + 链上执行
 - 套利监控：价格偏差检测与告警
 
 ##### 部署与运维
+
 - 合约部署：多链部署脚本（Hardhat / Foundry）
 - 合约验证：Etherscan 源码验证
 - 后端部署：Docker + Kubernetes
@@ -565,6 +570,7 @@
 #### 第 17 周：NFT 市场核心开发
 
 ##### 智能合约层
+
 - NFT 铸造合约：ERC-721 + 白名单 + 分阶段铸造
 - 交易合约：挂单 / 购买 / 取消 / 出价 / 接受出价
 - 拍卖合约：英式拍卖 / 荷兰式拍卖
@@ -572,6 +578,7 @@
 - 合约升级：UUPS 代理模式
 
 ##### Go 后端服务
+
 - NFT 元数据服务：IPFS 上传 + 元数据缓存
 - 订单簿服务：链下签名订单（类 OpenSea Seaport 协议）
 - 索引服务：NFT Transfer / Sale / Listing 事件索引
@@ -579,6 +586,7 @@
 - 排行榜服务：Collection / Trader 排行
 
 ##### Flutter 前端
+
 - NFT 浏览页：瀑布流展示、属性过滤、排序
 - NFT 详情页：图片/视频/3D 模型展示、属性、交易历史
 - 铸造页面：连接钱包 → 选择数量 → 铸造 → 展示结果
@@ -587,6 +595,7 @@
 #### 第 18 周：NFT 市场高级功能与部署
 
 ##### 高级功能
+
 - 批量操作：批量购买 / 批量挂单（Seaport 批量执行）
 - 稀有度计算：属性稀有度评分算法
 - 价格估算：地板价追踪、历史成交分析
@@ -594,6 +603,7 @@
 - 多链 NFT 聚合：跨链 NFT 展示
 
 ##### 部署与运维
+
 - 合约安全审计 Checklist
 - IPFS 节点部署与 Pin 服务
 - CDN 配置：NFT 图片加速
@@ -606,6 +616,7 @@
 #### 第 19 周：借贷平台核心开发
 
 ##### 智能合约层
+
 - 借贷池合约：存款 / 借款 / 还款 / 提取
 - 利率模型：动态利率曲线（类 Aave / Compound）
 - 抵押率管理：LTV / 清算阈值 / 健康因子
@@ -615,6 +626,7 @@
 - 治理代币：ERC-20 + 投票权 + 时间锁
 
 ##### Go 后端服务
+
 - 利率计算服务：实时利率更新
 - 清算机器人：健康因子监控 + 自动清算执行
 - 预言机价格服务：多源价格聚合 + 异常检测
@@ -622,6 +634,7 @@
 - 数据分析服务：TVL / 借贷量 / 利率历史
 
 ##### Flutter 前端
+
 - 市场总览：各资产的存借利率、TVL、利用率
 - 存款页面：选择资产 → 输入金额 → 确认存入
 - 借款页面：选择抵押品 → 选择借款资产 → 健康因子预览
@@ -631,12 +644,14 @@
 #### 第 20 周：借贷平台高级功能与课程总结
 
 ##### 高级功能
+
 - 闪电贷套利：利用闪电贷进行清算套利
 - 杠杆策略：循环借贷实现杠杆
 - 跨链借贷：跨链消息传递（LayerZero / Wormhole）
 - 治理系统：提案 / 投票 / 执行
 
 ##### 全课程总结与就业准备
+
 - 项目代码整理与 GitHub 展示
 - 技术博客撰写指导
 - 简历优化：Web3 项目经验包装
@@ -647,58 +662,59 @@
 
 ## 附录 A：技术栈速查表
 
-| 层级 | 技术选型 | 用途 |
-|------|---------|------|
-| 智能合约（EVM） | Solidity + Foundry/Hardhat | 以太坊及 EVM 兼容链合约开发 |
-| 智能合约（Solana） | Rust + Anchor | Solana 链上程序开发 |
-| 后端语言 | Go 1.22+ | 高并发区块链后端服务 |
-| Web 框架 | Gin / Echo | RESTful API 服务 |
-| RPC 框架 | gRPC + protobuf | 微服务间通信 |
-| 链交互 | go-ethereum (ethclient) | 以太坊节点交互 |
-| 前端框架 | Flutter 3.x + Dart 3.x | 跨平台 DApp 客户端 |
-| Web3 库（Dart） | web3dart / webthree | 合约交互、交易签名 |
-| 钱包连接 | walletconnect_flutter_v2 | WalletConnect 协议 |
-| 状态管理 | Riverpod 2.0 | Flutter 状态管理 |
-| 关系数据库 | PostgreSQL | 结构化数据存储 |
-| 缓存 | Redis | 热数据缓存、分布式锁 |
-| 消息队列 | Kafka / NATS | 异步事件处理 |
-| 去中心化存储 | IPFS / Arweave | NFT 元数据、文件存储 |
-| 数据索引 | The Graph | 链上数据索引查询 |
-| 预言机 | Chainlink | 链下数据上链 |
-| 监控 | Prometheus + Grafana | 服务指标监控 |
-| 链路追踪 | OpenTelemetry + Jaeger | 分布式链路追踪 |
-| 容器化 | Docker + Kubernetes | 服务部署与编排 |
-| CI/CD | GitHub Actions | 自动化构建部署 |
+| 层级               | 技术选型                   | 用途                        |
+| ------------------ | -------------------------- | --------------------------- |
+| 智能合约（EVM）    | Solidity + Foundry/Hardhat | 以太坊及 EVM 兼容链合约开发 |
+| 智能合约（Solana） | Rust + Anchor              | Solana 链上程序开发         |
+| 后端语言           | Go 1.22+                   | 高并发区块链后端服务        |
+| Web 框架           | Gin / Echo                 | RESTful API 服务            |
+| RPC 框架           | gRPC + protobuf            | 微服务间通信                |
+| 链交互             | go-ethereum (ethclient)    | 以太坊节点交互              |
+| 前端框架           | Flutter 3.x + Dart 3.x     | 跨平台 DApp 客户端          |
+| Web3 库（Dart）    | web3dart / webthree        | 合约交互、交易签名          |
+| 钱包连接           | walletconnect_flutter_v2   | WalletConnect 协议          |
+| 状态管理           | Riverpod 2.0               | Flutter 状态管理            |
+| 关系数据库         | PostgreSQL                 | 结构化数据存储              |
+| 缓存               | Redis                      | 热数据缓存、分布式锁        |
+| 消息队列           | Kafka / NATS               | 异步事件处理                |
+| 去中心化存储       | IPFS / Arweave             | NFT 元数据、文件存储        |
+| 数据索引           | The Graph                  | 链上数据索引查询            |
+| 预言机             | Chainlink                  | 链下数据上链                |
+| 监控               | Prometheus + Grafana       | 服务指标监控                |
+| 链路追踪           | OpenTelemetry + Jaeger     | 分布式链路追踪              |
+| 容器化             | Docker + Kubernetes        | 服务部署与编排              |
+| CI/CD              | GitHub Actions             | 自动化构建部署              |
 
 ---
 
 ## 附录 B：每周实战项目产出清单
 
-| 周次 | 实战产出 |
-|------|---------|
-| 第 1 周 | Go 最小区块链 + HD 钱包生成器 + RLP 解码器 |
-| 第 2 周 | 多链合约部署 + 全栈开发环境 + The Graph 子图 |
-| 第 3 周 | 区块链交易序列化库 + 高并发事件监听器 + 测试套件 |
-| 第 4 周 | 批量转账工具 + Uniswap V3 Go SDK |
-| 第 5 周 | DApp 后端 API 骨架 + gRPC 数据同步服务 + 异步处理管道 |
-| 第 6 周 | DEX 数据库 Schema + 价格缓存服务 + NFT 元数据服务 + 可观测性体系 |
-| 第 7 周 | ERC-20 代币 + 可升级合约 + NFT 合约 + Fuzz 测试套件 |
-| 第 8 周 | AMM 数学库 + 自定义 Uniswap V4 Hook + 流动性管理合约 |
-| 第 9 周 | 5 个攻击复现 + 安全防护层 + 完整安全审计报告 |
-| 第 10 周 | Rust 代币转账 + Solana 计数器 + SPL Staking + Solana DEX |
-| 第 11 周 | Dart 地址工具库 + DApp UI 骨架 + MetaMask 连接 |
-| 第 12 周 | HD 钱包完整流程 + 转账功能 + 资产总览页面 + 安全交互流程 |
-| 第 13 周 | DApp 浏览器 + Token Swap 页面 + 流动性管理页面 + 多链支持 |
-| 第 14 周 | Riverpod 状态重构 + 网络层封装 + 性能优化 + CI/CD 流水线 |
-| 第 15-16 周 | 完整 DEX 交易所（合约 + 后端 + 前端 + 部署） |
-| 第 17-18 周 | 完整 NFT 交易市场（合约 + 后端 + 前端 + 部署） |
-| 第 19-20 周 | 完整 DeFi 借贷平台（合约 + 后端 + 前端 + 部署）+ 就业准备 |
+| 周次        | 实战产出                                                         |
+| ----------- | ---------------------------------------------------------------- |
+| 第 1 周     | Go 最小区块链 + HD 钱包生成器 + RLP 解码器                       |
+| 第 2 周     | 多链合约部署 + 全栈开发环境 + The Graph 子图                     |
+| 第 3 周     | 区块链交易序列化库 + 高并发事件监听器 + 测试套件                 |
+| 第 4 周     | 批量转账工具 + Uniswap V3 Go SDK                                 |
+| 第 5 周     | DApp 后端 API 骨架 + gRPC 数据同步服务 + 异步处理管道            |
+| 第 6 周     | DEX 数据库 Schema + 价格缓存服务 + NFT 元数据服务 + 可观测性体系 |
+| 第 7 周     | ERC-20 代币 + 可升级合约 + NFT 合约 + Fuzz 测试套件              |
+| 第 8 周     | AMM 数学库 + 自定义 Uniswap V4 Hook + 流动性管理合约             |
+| 第 9 周     | 5 个攻击复现 + 安全防护层 + 完整安全审计报告                     |
+| 第 10 周    | Rust 代币转账 + Solana 计数器 + SPL Staking + Solana DEX         |
+| 第 11 周    | Dart 地址工具库 + DApp UI 骨架 + MetaMask 连接                   |
+| 第 12 周    | HD 钱包完整流程 + 转账功能 + 资产总览页面 + 安全交互流程         |
+| 第 13 周    | DApp 浏览器 + Token Swap 页面 + 流动性管理页面 + 多链支持        |
+| 第 14 周    | Riverpod 状态重构 + 网络层封装 + 性能优化 + CI/CD 流水线         |
+| 第 15-16 周 | 完整 DEX 交易所（合约 + 后端 + 前端 + 部署）                     |
+| 第 17-18 周 | 完整 NFT 交易市场（合约 + 后端 + 前端 + 部署）                   |
+| 第 19-20 周 | 完整 DeFi 借贷平台（合约 + 后端 + 前端 + 部署）+ 就业准备        |
 
 ---
 
 ## 附录 C：推荐学习资源
 
 ### 官方文档
+
 - [Go 官方文档](https://go.dev/doc/)
 - [Solidity 官方文档](https://docs.soliditylang.org/)
 - [Flutter 官方文档](https://docs.flutter.dev/)
@@ -708,6 +724,7 @@
 - [Anchor 文档](https://www.anchor-lang.com/)
 
 ### 开源项目参考
+
 - [go-ethereum](https://github.com/ethereum/go-ethereum) — Go 实现的以太坊客户端
 - [Uniswap V3 Core](https://github.com/Uniswap/v3-core) — Uniswap V3 核心合约
 - [Uniswap V4 Core](https://github.com/Uniswap/v4-core) — Uniswap V4 核心合约
@@ -716,12 +733,14 @@
 - [walletconnect_flutter_v2](https://pub.dev/packages/walletconnect_flutter_v2) — Flutter WalletConnect
 
 ### 学习平台
+
 - [Cyfrin Updraft](https://updraft.cyfrin.io/) — Solidity 与安全审计课程
 - [Road to Web3](https://www.web3.university/tracks/road-to-web3) — Web3 University 学习路径
 - [Speedrun Ethereum](https://speedrunethereum.com/) — 以太坊快速上手挑战
 - [Solana Cookbook](https://solanacookbook.com/) — Solana 开发食谱
 
 ### 安全资源
+
 - [SWC Registry](https://swcregistry.io/) — 智能合约弱点分类
 - [Rekt News](https://rekt.news/) — DeFi 安全事件分析
 - [DeFi Hack Labs](https://github.com/SunWeb3Sec/DeFiHackLabs) — DeFi 攻击复现
@@ -799,4 +818,4 @@ Web3 全栈项目架构
 
 ---
 
-> 本大纲基于 [秀才 Web3 大师之路](https://github.com/xiucai-web3-master-road/xiucai-web3-master-road-university) 课程体系进行扩写，结合 Go + Flutter 技术栈重新设计，融合了 [Road to Web3](https://www.web3.university/tracks/road-to-web3)、[Cyfrin Updraft](https://updraft.cyfrin.io/)、[Solana 官方文档](https://solana.com/docs) 等多方资源，以项目实战为核心驱动。
+> 本大纲结合 Go + Flutter 技术栈重新设计，融合了 [Road to Web3](https://www.web3.university/tracks/road-to-web3)、[Cyfrin Updraft](https://updraft.cyfrin.io/)、[Solana 官方文档](https://solana.com/docs) 等多方资源，以项目实战为核心驱动。

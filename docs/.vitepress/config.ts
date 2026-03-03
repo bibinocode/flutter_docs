@@ -30,6 +30,7 @@ export default defineConfig({
       { text: '项目推荐', link: '/projects/' },
       { text: '📢 最新动态', link: '/news/' },
       { text: '🔗 Web3 全栈', link: '/web3/' },
+      { text: '🦀 Rust 实战', link: '/rust/' },
     ],
     
     // 侧边栏
@@ -338,6 +339,61 @@ export default defineConfig({
         },
       ],
       
+      // Rust + Flutter 实战专栏
+      '/rust/': [
+        {
+          text: 'Rust + Flutter 实战专栏',
+          collapsed: false,
+          items: [
+            { text: '📋 课程大纲总览', link: '/rust/' },
+          ]
+        },
+        {
+          text: '第一模块：Rust 语言基础',
+          collapsed: false,
+          items: [
+            { text: '第1章 环境搭建与基础语法', link: '/rust/01-basics' },
+            { text: '第2章 所有权、借用与生命周期', link: '/rust/02-ownership' },
+            { text: '第3章 结构体、枚举与模式匹配', link: '/rust/03-compound-types' },
+          ]
+        },
+        {
+          text: '第二模块：Rust 高级特性',
+          collapsed: false,
+          items: [
+            { text: '第4章 Trait 与泛型编程', link: '/rust/04-traits-generics' },
+            { text: '第5章 错误处理与集合类型', link: '/rust/05-error-handling' },
+            { text: '第6章 闭包与迭代器', link: '/rust/06-closures-iterators' },
+          ]
+        },
+        {
+          text: '第三模块：Rust 系统编程',
+          collapsed: false,
+          items: [
+            { text: '第7章 智能指针与内存管理', link: '/rust/07-smart-pointers' },
+            { text: '第8章 多线程与并发编程', link: '/rust/08-concurrency' },
+            { text: '第9章 异步编程与 Tokio', link: '/rust/09-async' },
+          ]
+        },
+        {
+          text: '第四模块：Flutter Rust Bridge',
+          collapsed: false,
+          items: [
+            { text: '第10章 FRB 基础与项目搭建', link: '/rust/10-flutter-rust-bridge' },
+            { text: '第11章 类型映射与跨语言调用', link: '/rust/11-type-bindning' },
+            { text: '第12章 异步、流与高级特性', link: '/rust/12-async-stream' },
+          ]
+        },
+        {
+          text: '第五模块：综合实战项目',
+          collapsed: false,
+          items: [
+            { text: '第13章 热更新系统', link: '/rust/13-hot-reload' },
+            { text: '第14章 音视频播放器', link: '/rust/14-media-player' },
+          ]
+        },
+      ],
+
       // 新闻动态
       '/news/': [
         {
